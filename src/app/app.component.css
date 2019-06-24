@@ -1,3 +1,10 @@
 p {
   font-family: Lato;
 }
+
+.link{
+  color: blue;
+  cursor: pointer;
+  margin: 0 5px;
+  display: inline-block;
+}
