@@ -1,3 +1,3 @@
-# angular-nqnzpe
+# angular-router
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-nqnzpe)

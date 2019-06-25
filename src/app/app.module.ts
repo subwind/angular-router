@@ -9,10 +9,11 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
+import { Page1ChildComponent } from './page1/page1-child.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent,HomeComponent, Page1Component, Page2Component ],
+  declarations: [ AppComponent, HelloComponent,HomeComponent, Page1Component, Page2Component, Page1ChildComponent ],
   bootstrap:    [ AppComponent ],
   providers:[{ provide: APP_BASE_HREF, useValue : '/' }]
 })
