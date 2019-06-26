@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page1.component.css']
 })
 export class Page1Component implements OnInit {
-
+  public myParentStr:string;
+  public count:number=0;
   constructor() { }
 
   ngOnInit() {
+    this.myParentStr="from parent";
+  }
+
+  public countChange(data:number):void{
+    this.count = data;
   }
 
 }

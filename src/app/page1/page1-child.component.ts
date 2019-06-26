@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-page1-child',
@@ -6,7 +6,7 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./page1-child.component.css']
 })
 export class Page1ChildComponent implements OnInit {
-  //@Input() public myChild:string;
+  //Methold 1
   private _myChild:string = '';
   @Input()
   public set myChild(value:string){
@@ -18,9 +18,31 @@ export class Page1ChildComponent implements OnInit {
     return this._myChild;
   }
 
+  //Methold 2
+  @Input() myChild2:string;
+
+
+  @Input() count:number;
+
+  @Output() change: EventEmitter<number> = new EventEmitter<number>();
+
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  //+
+  public add():void{
+    this.count++;
+    this.change.emit(this.count);
+
+  }
+
+  //-
+  public minus():void{
+    this.count--;
+    this.change.emit(this.count);
   }
 
 }
