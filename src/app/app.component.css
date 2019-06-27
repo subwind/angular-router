@@ -7,4 +7,17 @@ p {
   cursor: pointer;
   margin: 0 5px;
   display: inline-block;
+  outline: none;
+}
+
+.hidden{
+  display:none;
+  /* display: inline-block; */
+}
+
+input#home:checked ~ label[for="home"],
+input#page1:checked ~ label[for="page1"],
+input#page2:checked ~ label[for="page2"]
+{
+  color:brown;
 }

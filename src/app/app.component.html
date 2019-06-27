@@ -1,6 +1,9 @@
 <div>
-  <a routerLink="/home" class="link">Home</a>
-  <a routerLink="/page1" class="link">Page1</a>
-  <a routerLink="/page2" class="link">Page2</a>
+  <input id="home" class="hidden" name="menu" type="radio" checked/>
+  <input id="page1" class="hidden" name="menu" type="radio" />
+  <input id="page2" class="hidden" name="menu" type="radio" />
+  <label routerLink="/home" for="home" class="link">Home</label>
+  <label routerLink="/page1" for="page1" class="link">Page1</label>
+  <label routerLink="/page2" for="page2"  class="link">Page2</label>
 </div>
 <router-outlet></router-outlet>

@@ -9,7 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'page1', component: Page1Component },
+  { path: 'page1', component: Page1Component,data:[{myKey:'myValue'}] },
   { path: 'page2', component: Page2Component }
 ];
 
