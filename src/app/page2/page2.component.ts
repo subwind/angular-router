@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ContentChild,ViewChild } from '@angular/core';
+import { PageContentComponent } from './page-content.component';
 
 @Component({
   selector: 'app-page2',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page2Component implements OnInit {
 
+  @ViewChild(PageContentComponent)public pContent:PageContentComponent;
+
   constructor() { }
 
   ngOnInit() {
+    console.log('111',this.pContent)
   }
 
 }

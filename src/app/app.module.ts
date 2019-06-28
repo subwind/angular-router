@@ -10,12 +10,13 @@ import { HomeComponent } from './home.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { Page1ChildComponent } from './page1/page1-child.component';
+import { PageContentComponent } from './page2/page-content.component';
 import { COUNT_MESSAGE } from './default-value.module';
 import { HelloService } from './hello.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent,HomeComponent, Page1Component, Page2Component, Page1ChildComponent ],
+  declarations: [ AppComponent, HelloComponent,HomeComponent, Page1Component, Page2Component, Page1ChildComponent,PageContentComponent ],
   bootstrap:    [ AppComponent ],
   providers:[
     { provide: APP_BASE_HREF, useValue : '/' },

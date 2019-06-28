@@ -1,13 +1,20 @@
+
 p {
   font-family: Lato;
 }
 
 .link{
-  color: blue;
   cursor: pointer;
-  margin: 0 5px;
+  padding: 2px 7px;
   display: inline-block;
   outline: none;
+  height: 26px;
+  line-height: 26px;
+}
+
+.link:hover{
+  background:#000;
+  opacity:0.9;
 }
 
 .hidden{
@@ -17,7 +24,13 @@ p {
 
 input#home:checked ~ label[for="home"],
 input#page1:checked ~ label[for="page1"],
-input#page2:checked ~ label[for="page2"]
-{
-  color:brown;
+input#page2:checked ~ label[for="page2"]{
+  color:#000000;
+  background-color: #FFFFFF;
+}
+
+.topMenu{
+  background-color: #000000;
+  color:#FFFFFF;
+  font-size: 18px;
 }
