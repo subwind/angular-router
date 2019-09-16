@@ -13,6 +13,8 @@ import { Page1ChildComponent } from './page1/page1-child.component';
 import { PageContentComponent } from './page2/page-content.component';
 import { COUNT_MESSAGE } from './default-value.module';
 import { HelloService } from './hello.service';
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { AppHttpInterceptorService } from './interceptor/app-http-interceptor.service'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
@@ -21,7 +23,12 @@ import { HelloService } from './hello.service';
   providers:[
     { provide: APP_BASE_HREF, useValue : '/' },
     { provide: COUNT_MESSAGE,useValue:0},
-    HelloService
+    HelloService,
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AppHttpInterceptorService,
+    multi: true,
+  }
   ]
 })
 export class AppModule { }
